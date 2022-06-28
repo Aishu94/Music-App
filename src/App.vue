@@ -56,7 +56,18 @@ export default {
         this.player.src = this.current.src;
       }
       this.player.play();
-      this.isPlaying = true;
+      this.player.addEventListener('ended', function () {
+        this.index++;
+        if (this.index > this.songs.index - 1) {
+        this.index = 0;
+      }
+
+      this.current = this.songs[this.index];
+
+      this.play(this.current);
+
+
+      }.bind(this));
 
     },
     pause () {
@@ -113,5 +124,11 @@ header {
   padding: 15px;
   background: #212121;
   color: #fff;
+}
+
+main {
+  width: 100%;
+  max-width: auto;
+
 }
 </style>
