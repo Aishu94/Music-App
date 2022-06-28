@@ -21,11 +21,18 @@ export default {
       current: {
         title: 'SONG TITLE'
       },
-      songs: {
-        title: 'Grateful',
-        artist: 'Neffex',
-        src: require()
+      songs: [
+        {
+        title: 'Gotay',
+        artist: 'Nessi',
+        src: require('./assets/Gotay_El_Autentiko_Ft_Nesi_-_Soltero.mp3')
+      },
+      {
+        title: 'Rolling',
+        artist: 'Blackouts',
+        src: require('./assets/Rolling_Blackouts_Coastal_Fever_-_Tidal_River.mp3')
       }
+      ]
     }
   }
 }
